@@ -32,7 +32,7 @@ public class MetodoPasajero {
             pw.println("|"+pasajero.getEdad_pasajero());
             pw.close();
         } catch (IOException e){
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Archivo C:\\Pasajero.txt No Encontrado");
         }
     }
     
@@ -62,7 +62,7 @@ public class MetodoPasajero {
                 mdlTablaP.addRow(x);
             }
         }catch (Exception e){
-        JOptionPane.showMessageDialog(null, e);
+        JOptionPane.showMessageDialog(null, "Archivo C:\\Pasajero.txt No Encontrado");
         }
         return mdlTablaP;
     }

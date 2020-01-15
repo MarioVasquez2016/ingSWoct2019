@@ -2,6 +2,7 @@ package proyect_metodos;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -63,8 +64,9 @@ public class MetodoRutas {
                 }
                 mdlTablaR.addRow(x);
             }
-        }catch (Exception e){
-        JOptionPane.showMessageDialog(null, e);
+        }catch (IOException e){
+        JOptionPane.showMessageDialog(null, "Archivo C:\\Rutas.txt No Encontrado");
+
         }
         return mdlTablaR;
     }
@@ -88,7 +90,8 @@ public class MetodoRutas {
             }br.close();
             fr.close();
         }catch (Exception e){
-        JOptionPane.showMessageDialog(null, e);
+        
+        JOptionPane.showMessageDialog(null, "Archivo C:\\Rutas.txt No Encontrado");
         }       
         return vPrincipal;
     }
